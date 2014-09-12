@@ -1,0 +1,6 @@
+#+TITLE: Beamer Theme Barnslig
+* Description
+This is a minimalist theme for LaTeX beamer.  It is mostly black and
+white with a little red, like IKEA's Barnslig Park character.
+* Authors
+Josiah Schwab <jschwab@gmail.com>

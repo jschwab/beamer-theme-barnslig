@@ -1,0 +1,90 @@
+%%% beamerthemebarnslig.sty
+%%% this is a minimalist beamer theme
+%%% Josiah Schwab <jschwab@gmail.com>
+
+%%% default font choices
+\usepackage{iwona}
+\usepackage{tikz}
+
+%%% don't display navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%%% default color scheme is black on white with a little bit of red
+\definecolor{darkgray}{cmyk}{0.7,0.7,0.7,0}
+\definecolor{gray}{cmyk}{0.3,0.3,0.3,0}
+\definecolor{lightgray}{cmyk}{0.1,0.1,0.1,0}
+\definecolor{red}{cmyk}{0.0,1.0,1.0,0.2}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=black}
+
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+
+\setbeamercolor{alerted text}{fg=red}
+
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{box title}{fg=gray}
+
+\setbeamercolor{block title}{bg=lightgray,fg=black}
+\setbeamercolor{block title alerted}{use=block title,fg=red}
+\setbeamercolor{block title example}{use=block title}
+
+\setbeamercolor{itemize item}{fg=gray}
+\setbeamercolor{itemize subitem}{fg=gray}
+\setbeamercolor{itemize subsubitem}{fg=gray}
+
+\setbeamercolor{enumerate item}{fg=darkgray}
+\setbeamercolor{enumerate subitem}{fg=darkgray}
+\setbeamercolor{enumerate subsubitem}{fg=darkgray}
+
+
+\renewcommand{\tiny}{\fontsize{7pt}{8pt}\selectfont}
+\renewcommand{\scriptsize}{\fontsize{9pt}{12pt}\selectfont}
+\renewcommand{\footnotesize}{\fontsize{10pt}{12pt}\selectfont}
+\renewcommand{\small}{\fontsize{12pt}{18pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{14pt}{18pt}\selectfont}
+\renewcommand{\large}{\fontsize{16pt}{24pt}\selectfont}
+\renewcommand{\Large}{\fontsize{24pt}{37pt}\selectfont}
+\renewcommand{\LARGE}{\fontsize{36pt}{48pt}\selectfont}
+\renewcommand{\huge}{\fontsize{48pt}{54pt}\selectfont}
+\renewcommand{\Huge}{\fontsize{80pt}{96pt}\selectfont}
+
+\setbeamerfont{footline}{size=\normalsize\selectfont}
+\setbeamerfont{frametitle}{size=\large\selectfont}
+
+\setbeamertemplate{title page}
+{
+	\begin{center}
+		{\Large\inserttitle}
+
+		\vskip0.4cm\par
+		\insertsubtitle
+
+		\vskip1.6cm\par
+		{\normalsize \bf \insertauthor} \par
+		{\small \insertinstitute} \par
+		{\small \insertdate}
+	\end{center}
+}
+
+
+%%% can sometimes be useful to have a completely empty slide
+
+\newcommand{\emptyslide}{\begin{frame}[plain]\end{frame}}
+
+%%% Display a table of contents at the beginning of each section
+%%% http://lists.gnu.org/archive/html/emacs-orgmode/2014-04/msg01063.html
+
+\AtBeginSection[]{
+  \ifnum\value{section}>1
+  \begin{frame}<beamer>
+    \frametitle{}
+    \tableofcontents[currentsection]
+  \end{frame}
+  \fi
+}
+
+
+
+
